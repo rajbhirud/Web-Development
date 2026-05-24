@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Form to gather some important information</h1>
+
+    <form action="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+
+        <div>
+            <label for="gender">What is your Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="married" id="married">
+            <label for="married">I'm a married individual</label>
+        </div>
+
+        <div>
+            <label for="answer">What are your previous professional experiences?</label>
+            <br>
+            <textarea name="answer" id="answer" cols="50" rows="5" autofocus>Enter your professional experiences</textarea>
+        </div>
+
+        <div>
+            <label for="fruit">What is your favorite food from the following?</label>
+            <select name="fruit" id="fruit">
+                <option value="apple">Apple</option>
+                <option value="mango">Mango</option>
+                <option value="orange">Orange</option>
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>
