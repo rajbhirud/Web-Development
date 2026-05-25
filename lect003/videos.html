@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video, Audio and Media</title>
+</head>
+
+<body>
+    <h1>Video Audio and Media</h1>
+
+    <div>
+        <video src="best4.mp4" height="250" controls poster="20250827_143206.jpg">4 years of college</video>
+        <video src="best4.mp4" width="500" autoplay loop muted></video>
+    </div>
+
+    <!-- for audio we use the tags <audio src=""></audio> and the attributes are similar to video -->
+    <!-- preload attribute in audio tag: none-don’t load audio, metadata-load only info (duration, etc.), auto-load the whole audio if possible -->
+
+    <div>
+        <svg height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+        <img src="image.svg" alt="image">
+    </div>
+
+    <div>
+        <iframe src="https://www.wikipedia.org/" frameborder="0" width="500" height="300"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=ksAMbOdvhS7QSmk7"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
