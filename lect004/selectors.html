@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        div {
+            background-color: turquoise;
+        }
+
+        /* Class Selector */
+        .pink {
+            background-color: pink;
+        }
+
+        /* Id Selector */
+        #yellow {
+            background-color: yellow;
+        }
+
+        /* Child Selector */
+        div > p {
+            background-color: orangered;
+        }
+
+        /* Descendant Selector */
+        div span {
+            background-color: aquamarine;
+        }
+
+        /* Universal Selector */
+        * {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        /* Pseudo Selector */
+        a:visited {
+            color: red;
+        }
+        a:link {
+            color: green;
+        }
+        a:hover {
+            background-color: lightgreen;
+        }
+        p:first-child {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectors in CSS</h1>
+
+    <div>This is a div with background-color turquoise.</div>
+    <div>
+        This is another div block
+        <p>
+            This is a paragragh inside div.
+        </p>
+
+        <article>
+            <p>
+                This is a paragragh inside article tag of the div.
+            </p>
+            <span>
+                this demonstrates the use of descendant selector.
+            </span>
+        </article>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="pink">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <p id="yellow">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+    <a href="https://www.wikipedia.com">Link to Wikipedia</a>
+</body>
+</html>
