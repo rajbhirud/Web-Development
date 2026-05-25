@@ -29,3 +29,19 @@ div{
 span{
     background-color: orange;
 }
+
+.red{
+    color: red;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+.primary{
+    background-color: rgb(99, 235, 160);
+}
+
+.secondary{
+    background-color: lightcoral;
+}
