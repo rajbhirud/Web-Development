@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        .overflow {
+            width: 40vw;
+            height: 10vh;
+            border: 1px solid brown;
+            overflow: scroll;
+        }
+        .whitespace {
+            width: 40vw;
+            height: 10vh;
+            border: 1px solid blue;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .directional {
+            width: 30vw;
+            height: 10vh;
+            border: 1px solid red;
+            /* overflow-x: clip; */
+            /* overflow-y: auto; */
+            overflow: clip auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Handling Overflow in CSS</h1>
+
+    <div class="overflow">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime consequuntur, cupiditate debitis hic molestias natus nesciunt mollitia ea eaque provident perspiciatis adipisci accusantium consectetur ducimus sit incidunt reiciendis odio nam tenetur. Neque laborum labore corporis illum cumque molestias debitis nostrum. Dicta sit necessitatibus unde architecto.
+    </div>
+    <div class="whitespace">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat in mollitia aspernatur libero corrupti necessitatibus sint ea molestiae quos omnis esse numquam, dicta ipsa, magni voluptates repellendus. Placeat eligendi itaque, consequatur minus ipsa tempore, illo alias cupiditate sint temporibus porro! Sequi minima totam sint laboriosam.
+    </div>
+    <div class="directional">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis culpa eos earum non magni placeat delectus officiis iure dolor voluptate, ab incidunt eveniet explicabo nulla a voluptates maiores labore at, assumenda atque necessitatibus recusandae. Qui repellendus quos maxime sit aliquam facilis, dolor cupiditate quisquam. Error?
+    </div>
+</body>
+</html>
