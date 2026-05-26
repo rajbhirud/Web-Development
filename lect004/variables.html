@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            /* golbal variables */
+            --color: hotpink;
+            --seccolor: pink;
+            --bordercolor: white;
+            --defop: 0.5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            display: flex;
+        }
+        ul li {
+            list-style: none;
+            margin: 4px;
+            padding: 10px;
+            border: 2px solid var(--bordercolor);
+        }
+        ul li:first-child {
+            --color: red;       /*local variable*/ 
+            background-color: var(--color);
+            opacity: var(--defop);
+        }
+        ul li:nth-child(3) {
+            background-color: var(--thircolor, orange);
+        }
+        .nav {
+            background-color: var(--color);
+        }
+        .var {
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <h1>Variables in CSS</h1>
+
+    <div class="nav">
+        <ul>
+            <li>About</li>
+            <li>Home</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="var">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut vel fuga vero earum eos, illo facere perspiciatis, illum consequuntur quo numquam laudantium facilis asperiores laborum. Enim, recusandae. Beatae eius earum aliquid deleniti, aliquam et?
+    </div>
+</body>
+</html>
