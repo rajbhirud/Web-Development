@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            border: 1px solid blue;
+            background-color: yellow;
+            padding: 40px;
+            display: inline-flex;
+            justify-content: center;
+        }
+        .block {
+            border: 1px solid red;
+            background-color: pink;
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            padding: 40px;
+        }
+        .visibility {
+            /* display: none; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Property in CSS</h1>
+
+    <div class="box visibility">
+        Lorem, ipsum dolor.
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit.
+    </div>
+    <div class="block">
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+    <div class="block">
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+</body>
+</html>
