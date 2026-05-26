@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        .pink {
+            color: pink !important;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .red {
+            color: red;
+        }
+        
+        p {
+            color: blue;
+        }
+
+        * {
+            color: gray;
+        }
+
+        span.magenta {
+            color: magenta;
+        }
+
+        .brown {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Specificity and Cascade in CSS</h1>
+    
+    <p class="yellow red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut repellendus nesciunt distinctio explicabo eum. Facere iste voluptate molestias non, consequatur accusamus qui cupiditate!</p>
+
+    <p class="pink yellow">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum saepe debitis mollitia repudiandae vero, explicabo, sunt pariatur, esse nihil cupiditate culpa blanditiis labore!</p>
+
+    <span class="brown magenta">This para has the color magenta as it has higher specificity (element+class selector=11) as compared to brown (class sector=10)</span>
+
+    <div>
+        <h3 style="color: navy;" class="yellow">The Cascade Algorithm</h3>
+        <ul>
+            <li>
+                Specificity: Inline style(1000) > ID selector(100) > Class or Attribute or Pseudo Selector(10) > Element Selector(1) > Universal Selector(0)
+            </li>
+            <li>
+                Cascade: for the selector with the same specificity the selector declared later has priority. 
+            </li>
+            <li>
+                !important keyword: this has the highest specificity among the all (consider the specificity valuue as 10,000).
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
