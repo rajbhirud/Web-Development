@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        .shadow {
+            border: 1px solid red;
+            padding: 4px;
+            box-shadow: 4px 4px 5px red;
+        }
+        .textshadow {
+            border: 1px solid magenta;
+            padding: 4px;
+            text-shadow: 1px 1px 5px green;
+        }
+        .outline {
+            border: 2px solid cyan;
+            border-radius: 1px;
+            outline: 2px solid blue;
+            outline-offset: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shadows and Outlines in CSS</h1>
+
+    <p class="shadow">
+        This box has a shadow,
+    </p>
+    <p class="textshadow">
+        The text in this box has shadow.
+    </p>
+    <p class="outline">
+        This box has both a border and an outline.
+    </p>
+</body>
+</html>
