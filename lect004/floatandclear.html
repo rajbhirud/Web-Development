@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        img {
+            float: left;
+        }
+        .cards {
+            border: 2px solid blue;
+            display: flow-root;
+        }
+        .card {
+            border: 1px solid red;
+            padding: 2px;
+            margin: 2px;
+        }
+        .card:nth-child(3) {
+            clear: left;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float and Clear</h1>
+
+    <div class="cards">
+        <img src="https://images.unsplash.com/photo-1636583133884-fbefc7ac3fb3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="130px">
+        <div class="card">
+            Ace of Spades
+        </div>
+        <div class="card">
+            Queen of Hearts
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, in officiis impedit, animi provident maiores, aut ex sunt error tenetur asperiores vero aspernatur? Numquam perferendis fugiat tempore necessitatibus modi tempora ad similique, dignissimos ab deleniti, illo qui at? Similique quas, praesentium laudantium fugiat reprehenderit dicta consequatur natus maxime facere cumque reiciendis harum eius alias distinctio, veritatis repellat delectus. Sunt commodi blanditiis voluptatibus incidunt. Necessitatibus dignissimos voluptatum sit nulla eligendi sunt explicabo. Voluptatum aliquam itaque nisi numquam expedita libero laboriosam. Adipisci debitis optio aut, magni reprehenderit soluta facilis molestias incidunt!
+            </p>
+        </div>
+        <div class="card">
+            Jack of Clubs
+        </div>
+    </div>
+
+    <p>
+        We generally do not use float and clear during styling instead there are various options that we can use using flex-box.
+    </p>
+</body>
+</html>
