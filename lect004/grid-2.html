@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        .container {
+            border: 2px solid purple;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                 "side article article"
+                                 "footer footer copyright";
+            /* gap: 10px; */
+            row-gap: 10px;
+            column-gap: 50px;
+        }
+        .items {
+            border: 2px solid salmon;
+            /* width: 50px; */
+            height: 50px;
+        }
+        .item-1 {
+            grid-area: nav;
+            background-color: orange;
+        }
+        .item-2 {
+            grid-area: side;
+            background-color: skyblue;
+        }
+        .item-3 {
+            grid-area: article;
+            background-color: lightgreen;
+        }
+        .item-4 {
+            grid-area: copyright;
+            background-color: hotpink;
+        }
+        .item-5 {
+            grid-area: footer;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Girds:Area names</h1>
+
+    <div class="container">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items  item-5">5</div>
+    </div>
+</body>
+</html>
