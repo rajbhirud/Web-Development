@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            width: 50vw;
+            height: 40vh;
+            border: 1px solid blue;
+        }
+        .box1 {
+            width: 5vw;
+            height: 4vh;
+            border: 1px solid red;
+
+            /* animation-name: myAnimation; */
+            /* animation-duration: 3s; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-iteration-count: 4; */
+            /* animation-delay: 1s; */
+            /* animation-direction: alternate; */
+            /* animation-play-state: paused; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: myAnimation 3s ease-in-out 1s 3 alternate backwards,
+                       rotate 10s ease-in-out 1s 1;
+        }
+
+        @keyframes myAnimation {
+            from {
+                background-color: pink;
+            }
+            to {
+                transform: translateX(20vw) translateY(10vh) scale(2);
+                background-color: hotpink;
+            }
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(20deg);
+            }
+            50%{
+                transform: rotate(200deg);
+            }
+            100%{
+                transform: rotate(-50deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animations</h1>
+
+    <div class="container">
+        <div class="box1">BOX</div>
+    </div>
+</body>
+</html>
