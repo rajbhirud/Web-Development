@@ -55,6 +55,43 @@
         [data-x="a"] {
             background-color: burlywood;
         }
+
+        .box:first-child {
+            background-color: beige ;
+        }
+        .box:nth-child(2)::first-line {
+            color: navy;
+        }
+        .box:nth-child(odd) {
+            padding: 20px;
+        }
+        .box:nth-last-child(1) {
+            background-color: cadetblue;
+        }
+
+        .boxes * {
+            color: green;
+            border: 1px solid hotpink;
+        }
+
+        /* Pseudo Elements */
+        .boxes::before {
+            content: "This is due to boxes::before. look at inspect to see the insertion";
+            color: brown;
+        }
+        .boxes::after {
+            content: "This is due to boxes::after.";
+        }
+
+        ::selection {
+            color: palevioletred;
+            background-color: black;
+        }
+
+        input::placeholder {
+            color: red;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
@@ -83,5 +120,14 @@
     <p data-x="a">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 
     <a href="https://www.wikipedia.com">Link to Wikipedia</a>
+    <hr>
+    
+    <div class="boxes">
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque!</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptate praesentium eum! Vitae debitis exercitationem nobis itaque dolor tenetur maxime laudantium dolorum, corporis sed? Veniam, quo porro quod, impedit doloribus quae animi nisi mollitia a nulla eum minima sit est provident assumenda illo ducimus. Facilis voluptatem harum eum et quaerat eligendi ut eveniet dignissimos beatae iusto voluptate sequi dolorum, est quae nostrum aut officiis nesciunt repellat soluta.</div>
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque!</div>
+    </div>
+
+    <input type="text" name="name" id="name" placeholder="what is your name?">
 </body>
 </html>
