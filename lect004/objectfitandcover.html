@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: lavender;
+            border: 2px solid purple;
+            margin: 20px;
+        }
+        img {
+            width: 350px;
+            height: 500px;
+            /* object-fit: contain; */
+            object-fit: cover;
+            /* object-position: top center; */
+            object-position: 50px 30px;
+        }
+        .imagecontainer {
+            background-image: url("https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80");
+            background-size: cover;
+            background-position: center 20px;
+            /* background-repeat: no-repeat; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Object-fit</h1>
+
+    <div class="container">
+        <img src="https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+    </div>
+    <div class="container imagecontainer"></div>
+</body>
+</html>
