@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        .img1 {
+            /* filter: blur(5px); */
+            /* filter: brightness(150%); */
+            filter: contrast(1.5) grayscale(50%) drop-shadow(16px 16px 10px olive);
+        }
+        .img2 {
+            filter: invert(0.9);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filters</h1>
+
+    <div class="container">
+        <img class="img1" src="https://img.magnific.com/free-photo/computer-program-coding-screen_53876-138060.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+        <img class="img2" src="https://img.magnific.com/free-photo/computer-program-coding-screen_53876-138060.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+
+    </div>
+</body>
+</html>
