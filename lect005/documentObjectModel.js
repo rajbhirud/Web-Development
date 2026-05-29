@@ -44,3 +44,43 @@ console.log(document.querySelector(".container").contains(divTag[3]));
 console.log(document.querySelector(".container").contains(document.querySelector("body")));
 console.log(document.querySelector("body").contains(document.querySelector(".container")));
 console.log(document.querySelector(".container").contains(document.querySelector(".container")));
+
+console.log(document.querySelector(".quadrilateral").innerHTML);
+console.log(document.querySelector(".quadrilateral").outerHTML);
+console.log(document.querySelector(".quadrilateral").innerText);
+console.log(document.querySelector(".quadrilateral").tagName);
+console.log(document.querySelector(".quadrilateral").nodeName);
+console.log(document.querySelector(".square").innerHTML);
+console.log(document.querySelector(".square").outerHTML);
+console.log(document.querySelector(".square").innerText);
+document.querySelector(".square").innerText = "This is a quadrilateral";
+// document.querySelector(".square").hidden = true;
+
+console.log(document.querySelector(".square").hasAttribute("style"));
+document.querySelector(".square").setAttribute("style", "font-size: 20px");
+console.log(document.querySelector(".square").getAttribute("style"));
+console.log(document.querySelector(".square").attributes);
+// document.querySelector(".square").removeAttribute("style");
+
+let div = document.createElement("div");
+div.innerHTML = "New box";
+div.setAttribute("class", "box");
+document.querySelector(".container").append(div);
+// document.querySelector(".container").prepend(div);
+// document.querySelector(".container").before(div);
+// document.querySelector(".container").after(div);
+// document.querySelector(".container").replaceWith(div);
+
+let con = document.querySelector(".container");
+con.insertAdjacentHTML("beforebegin", "hello");
+// con.insertAdjacentHTML("afterbegin", "hello");
+// con.insertAdjacentHTML("beforeend", "hello");
+// con.insertAdjacentHTML("afterend", "hello");
+
+console.log(document.querySelector(".container").classList);
+document.querySelector(".container").classList.add("blue");
+document.querySelector(".container").classList.remove("red");
+document.querySelector(".container").classList.toggle("green");
+console.log(document.querySelector(".container").className);
+document.querySelector(".container").classList.toggle("green");
+console.log(document.querySelector(".container").className);
