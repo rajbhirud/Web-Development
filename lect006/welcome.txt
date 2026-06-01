@@ -1,0 +1,4 @@
+Welcome to the tutorial of file handling in JavaScript
+WELCOME
+
+This is written from the filesPromise.js script!
