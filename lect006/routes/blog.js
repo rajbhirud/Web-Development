@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router()
 
+// Middleware that is specific to this router
+router.use((req, res, next) => {
+  console.log("LOGGED in blog");
+  next()
+})
+
 // respond with "hello world" when a GET request is made to the homepage
 router.get('/', (req, res) => {
   res.send('hello world');
