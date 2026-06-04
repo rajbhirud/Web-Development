@@ -1,0 +1,43 @@
+use("webDevelopment");
+
+console.log(db)
+db.createCollection("courses")
+
+// CREATE
+db.courses.insertOne({
+    "name": "Control Systems",
+    "code": "ME 779",
+    "grade": "AA",
+    "credits": 6
+})
+
+db.courses.insertMany([
+    {
+        "name": "Data Structures and Algorithms",
+        "code": "CS 213",
+        "grade": "BC",
+        "credits": 6
+    },
+    {
+        "name": "Rural Informatics",
+        "code": "GNR 631",
+        "grade": "W",
+        "credits": 6
+    },{
+        "name": "Craft Hybridization",
+        "code": "DE 334",
+        "grade": "AB",
+        "credits": 6
+    }
+])
+
+// READ
+db.courses.find({ credits: 6 })
+db.courses.findOne({ credits: 6 })
+
+// UPDATE
+db.courses.update({ code: "ME 779" }, { $set: { credits: 8 } })
+db.courses.updateOne({ credits: 6 }, { $set: { credits: 4 } })
+
+// DELETE
+db.courses.deleteOne({ credits: 6 })
