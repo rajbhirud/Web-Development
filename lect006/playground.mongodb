@@ -1,0 +1,48 @@
+// Switch to (or create) the database
+use("webDevelopment");
+
+// Insert sample data into the languages collection
+db.getCollection('codingLanguages').insertMany([
+  {
+    name: "JavaScript",
+    usedFor: ["Frontend", "Backend"],
+    frameworks: ["React", "Vue", "Node.js"]
+  },
+  {
+    name: "TypeScript",
+    usedFor: ["Frontend", "Backend"],
+    frameworks: ["Angular", "NestJS"]
+  },
+  {
+    name: "Python",
+    usedFor: ["Backend", "Data Science", "Automation"],
+    frameworks: ["Django", "Flask", "FastAPI"]
+  },
+  {
+    name: "Java",
+    usedFor: ["Backend", "Enterprise Applications"],
+    frameworks: ["Spring Boot"]
+  },
+  {
+    name: "PHP",
+    usedFor: ["Backend"],
+    frameworks: ["Laravel", "Symfony"]
+  },
+  {
+    name: "C#",
+    usedFor: ["Backend", "Desktop Applications"],
+    frameworks: [".NET"]
+  },
+  {
+    name: "SQL",
+    usedFor: ["Data Management", "Database Queries"],
+    frameworks: []
+  },
+  {
+    name: "Go",
+    usedFor: ["Backend", "Microservices"],
+    frameworks: ["Gin", "Fiber"]
+  }
+]);
+
+console.log("Done inserting data");
