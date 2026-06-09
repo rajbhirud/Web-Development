@@ -1,0 +1,13 @@
+.card {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid red;
+    background-color: pink;
+    width: 20vw;
+    margin: 16px auto;
+}
+
+.card p {
+    text-align: justify;
+    color: gray;
+}
