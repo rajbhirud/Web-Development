@@ -1,6 +1,7 @@
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Card from './components/Card'
+import Counter from "./components/useState"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Card />
           <Card />
         </div>
+        <Counter />
       </main>
       <Footer />
     </>
