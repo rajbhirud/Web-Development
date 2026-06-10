@@ -1,8 +1,12 @@
 import React from 'react'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Counter = () => {
     const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        alert("Count was updated")
+    }, [count])
 
     return (
         <div className="counter" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
