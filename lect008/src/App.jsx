@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar"
 import Card from './components/Card'
 import Counter from "./components/useState"
 import Conditionals from "./components/Conditionals"
+import HandleEvent from "./components/HandleEvent"
+
 import { useEffect } from "react"
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         </div>
         <Counter />
         <Conditionals />
+        <HandleEvent />
+        <div style={{height: "5vw"}} />
       </main>
       <Footer />
     </>
