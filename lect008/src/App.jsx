@@ -2,6 +2,7 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Card from './components/Card'
 import Counter from "./components/useState"
+import Conditionals from "./components/Conditionals"
 import { useEffect } from "react"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Card />
         </div>
         <Counter />
+        <Conditionals />
       </main>
       <Footer />
     </>
