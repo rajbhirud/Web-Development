@@ -1,11 +1,10 @@
-import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
-import Card from './components/Card'
-import Counter from "./components/useState"
-import Conditionals from "./components/Conditionals"
-import HandleEvent from "./components/HandleEvent"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Home from "./components/Home"
 
 import { useEffect } from "react"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
 
@@ -13,23 +12,26 @@ function App() {
     alert("Welcome to React tutorials")
   }, [])
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <><Navbar /><Home /></>
+    },
+    {
+      path: "/about",
+      element: <><Navbar /><About /></>
+    },
+    {
+      path: "/contact",
+      element: <><Navbar /><Contact /></>
+    }
+  ])
+
+
   return (
     <>
-      <Navbar />
-      <main>
-        This is the main content of the webpage.
-        <div className="cards">
-          <Card title="card 1" description= "description for card 1"/>
-          <Card imgsrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_0CRmJGP9COfqnVEk6H_0cdTFf8qtBFCxA&s"/>
-          <Card />
-          <Card />
-        </div>
-        <Counter />
-        <Conditionals />
-        <HandleEvent />
-        <div style={{height: "5vw"}} />
-      </main>
-      <Footer />
+      {/* <Navbar /> */}
+      <RouterProvider router={router}/>
     </>
   )
 }

@@ -1,7 +1,6 @@
 nav {
     background-color: beige;
     display: flex;
-    padding: 16px;
 }
 
 ul {
@@ -11,4 +10,10 @@ ul {
 
 li {
     list-style: none;
+    padding: 16px;
+}
+
+.blueviolet {
+    background-color: blueviolet;
+    color: white;
 }
