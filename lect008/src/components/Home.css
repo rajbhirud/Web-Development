@@ -1,0 +1,9 @@
+.displayCountHome {
+    text-align: center;
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid green;
+    background-color: darkmagenta;
+    color: antiquewhite;
+    width: 10vw;
+}

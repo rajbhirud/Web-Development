@@ -2,8 +2,9 @@ import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Home from "./components/Home"
+import { counterContext } from './context/context'
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
@@ -27,11 +28,14 @@ function App() {
     }
   ])
 
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      {/* <Navbar /> */}
-      <RouterProvider router={router}/>
+      <counterContext.Provider value={{count, setCount}}>
+        {/* <Navbar /> */}
+        <RouterProvider router={router} />
+      </counterContext.Provider>
     </>
   )
 }

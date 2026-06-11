@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Footer from "./Footer"
 import Card from './Card'
 import Counter from "./useState"
 import Conditionals from "./Conditionals"
 import HandleEvent from "./HandleEvent"
+import { counterContext } from '../context/context'
+import './Home.css'
 
 const Home = () => {
+    const { count, setCount } = useContext(counterContext);
     return (
         <div>
             <main>
@@ -19,6 +22,10 @@ const Home = () => {
                 <Counter />
                 <Conditionals />
                 <HandleEvent />
+                <div className='displayCountHome'>
+                    The counter is {count}
+                </div>
+
                 <div style={{ height: "5vw" }} />
             </main>
             <Footer />

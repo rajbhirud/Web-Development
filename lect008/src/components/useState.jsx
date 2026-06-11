@@ -1,8 +1,10 @@
 import React from 'react'
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useContext } from "react"
+import { counterContext } from '../context/context'
 
 const Counter = () => {
-    const [count, setCount] = useState(0)
+    // const [count, setCount] = useState(0)
+    const {count, setCount} = useContext(counterContext)
 
     // useEffect(() => {
     //     alert("Count was updated")
