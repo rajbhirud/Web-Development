@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import Footer from "./Footer"
 import Card from './Card'
 import Counter from "./useState"
@@ -7,8 +7,20 @@ import HandleEvent from "./HandleEvent"
 import { counterContext } from '../context/context'
 import './Home.css'
 
+const nums = new Array(3_000_000).fill(0).map((_, i) => {
+    return{
+        index: i,
+        isMagical: i===54_245
+    }
+})
+
 const Home = () => {
     const { count, setCount } = useContext(counterContext);
+    const [number, setNumber] = useState(nums);
+
+    // const magical = number.find(item=>item.isMagical===true)       // Expensive Computation
+    const magical = useMemo(() => number.find(item=>item.isMagical===true), [number])
+
     return (
         <div>
             <main>
@@ -25,6 +37,7 @@ const Home = () => {
                 <div className='displayCountHome'>
                     The counter is {count}
                 </div>
+                <span>Magical number is {magical.index}</span>
 
                 <div style={{ height: "5vw" }} />
             </main>
