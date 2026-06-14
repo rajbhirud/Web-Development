@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import './Form.css'
 
 const Form = () => {
+    const [message, setMessage] = useState("");
+    useEffect(() => {
+        setTimeout(() => {
+            setMessage("");
+        }, 5000);
+    }, [message]);
+
     const {
         register,
         handleSubmit,
@@ -20,8 +27,19 @@ const Form = () => {
 
     const onSubmit = async (data) => {
         await delay(2)      // simulating server delay
-        console.log(data)
-        reset()
+        let r = await fetch("http://localhost:3000/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)})
+        let res = await r.json()
+        console.log(res)
+
+        setMessage(res.message);
+        if (res.success) {
+            reset();
+        }
     }
 
     return (
@@ -107,7 +125,7 @@ const Form = () => {
                     Submit
                 </button>
                 {isSubmitting && <div>Submitting...</div>}
-
+                {message && <p className="success">{message}</p>}
             </form>
         </div>
     )
