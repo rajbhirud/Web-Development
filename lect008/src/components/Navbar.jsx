@@ -9,7 +9,8 @@ const Navbar = () => {
         <ul>
           <NavLink className={(e) => {return e.isActive?"blueviolet":""}} to ="/"><li>Home</li></NavLink>
           <NavLink className={(e) => {return e.isActive?"blueviolet":""}} to ="/about"><li>About</li></NavLink>
-          <NavLink className={(e) => {return e.isActive?"blueviolet":""}} to ="/contact"><li>Contact Us</li></NavLink>
+          <NavLink className={(e) => {return e.isActive?"blueviolet":""}} to ="/contact"><li>Contact Us</li></NavLink>          
+          <NavLink className={(e) => {return e.isActive?"blueviolet":""}} to ="/form"><li>User Details</li></NavLink>          
         </ul>
       </nav>
     </div>

@@ -1,0 +1,38 @@
+.form {
+    width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form form > div {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input,
+.form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form button {
+    padding: 10px 15px;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}

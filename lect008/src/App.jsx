@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Home from "./components/Home"
+import Form from "./components/Form"
 import { counterContext } from './context/context'
 
 import { useEffect, useState } from "react"
@@ -25,6 +26,10 @@ function App() {
     {
       path: "/contact",
       element: <><Navbar /><Contact /></>
+    },
+    {
+      path: "/form",
+      element: <><Navbar /><Form /></>
     }
   ])
 
